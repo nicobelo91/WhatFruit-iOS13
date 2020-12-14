@@ -9,23 +9,23 @@
 /* Begin PBXBuildFile section */
 		04C01A2F258826D300D15D18 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C01A2E258826D300D15D18 /* AppDelegate.swift */; };
 		04C01A31258826D300D15D18 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C01A30258826D300D15D18 /* SceneDelegate.swift */; };
-		04C01A33258826D300D15D18 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C01A32258826D300D15D18 /* ViewController.swift */; };
 		04C01A36258826D300D15D18 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04C01A34258826D300D15D18 /* Main.storyboard */; };
 		04C01A38258826D700D15D18 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04C01A37258826D700D15D18 /* Assets.xcassets */; };
 		04C01A3B258826D700D15D18 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04C01A39258826D700D15D18 /* LaunchScreen.storyboard */; };
 		04C01A44258826F100D15D18 /* FruitClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 04C01A43258826F100D15D18 /* FruitClassifier.mlmodel */; };
+		04C01A51258828A700D15D18 /* FruitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C01A50258828A700D15D18 /* FruitViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		04C01A2B258826D300D15D18 /* whatFruit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = whatFruit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04C01A2E258826D300D15D18 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04C01A30258826D300D15D18 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		04C01A32258826D300D15D18 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		04C01A35258826D300D15D18 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		04C01A37258826D700D15D18 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04C01A3A258826D700D15D18 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04C01A3C258826D700D15D18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04C01A43258826F100D15D18 /* FruitClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = FruitClassifier.mlmodel; sourceTree = "<group>"; };
+		04C01A50258828A700D15D18 /* FruitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,14 +60,38 @@
 			children = (
 				04C01A2E258826D300D15D18 /* AppDelegate.swift */,
 				04C01A30258826D300D15D18 /* SceneDelegate.swift */,
-				04C01A32258826D300D15D18 /* ViewController.swift */,
-				04C01A34258826D300D15D18 /* Main.storyboard */,
+				04C01A4A258827D000D15D18 /* Model */,
+				04C01A47258827C200D15D18 /* View */,
+				04C01A48258827C800D15D18 /* Controller */,
 				04C01A37258826D700D15D18 /* Assets.xcassets */,
 				04C01A39258826D700D15D18 /* LaunchScreen.storyboard */,
 				04C01A3C258826D700D15D18 /* Info.plist */,
-				04C01A43258826F100D15D18 /* FruitClassifier.mlmodel */,
 			);
 			path = whatFruit;
+			sourceTree = "<group>";
+		};
+		04C01A47258827C200D15D18 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				04C01A34258826D300D15D18 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		04C01A48258827C800D15D18 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				04C01A50258828A700D15D18 /* FruitViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		04C01A4A258827D000D15D18 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				04C01A43258826F100D15D18 /* FruitClassifier.mlmodel */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,8 +164,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04C01A33258826D300D15D18 /* ViewController.swift in Sources */,
 				04C01A2F258826D300D15D18 /* AppDelegate.swift in Sources */,
+				04C01A51258828A700D15D18 /* FruitViewController.swift in Sources */,
 				04C01A44258826F100D15D18 /* FruitClassifier.mlmodel in Sources */,
 				04C01A31258826D300D15D18 /* SceneDelegate.swift in Sources */,
 			);
