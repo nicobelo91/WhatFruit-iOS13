@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,11 @@
 		04C01A3B258826D700D15D18 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04C01A39258826D700D15D18 /* LaunchScreen.storyboard */; };
 		04C01A44258826F100D15D18 /* FruitClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 04C01A43258826F100D15D18 /* FruitClassifier.mlmodel */; };
 		04C01A51258828A700D15D18 /* FruitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C01A50258828A700D15D18 /* FruitViewController.swift */; };
+		04C01A5425882D2D00D15D18 /* FruitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C01A5325882D2D00D15D18 /* FruitManager.swift */; };
+		04C01A5825882DC700D15D18 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 04C01A5725882DC700D15D18 /* Alamofire */; };
+		04C01A5C25882DF100D15D18 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 04C01A5B25882DF100D15D18 /* SwiftyJSON */; };
+		04C01A6325882FD900D15D18 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 04C01A6225882FD900D15D18 /* SDWebImage */; };
+		04C01A6525882FD900D15D18 /* SDWebImageMapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 04C01A6425882FD900D15D18 /* SDWebImageMapKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +31,7 @@
 		04C01A3C258826D700D15D18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04C01A43258826F100D15D18 /* FruitClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = FruitClassifier.mlmodel; sourceTree = "<group>"; };
 		04C01A50258828A700D15D18 /* FruitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitViewController.swift; sourceTree = "<group>"; };
+		04C01A5325882D2D00D15D18 /* FruitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +39,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04C01A6325882FD900D15D18 /* SDWebImage in Frameworks */,
+				04C01A5C25882DF100D15D18 /* SwiftyJSON in Frameworks */,
+				04C01A6525882FD900D15D18 /* SDWebImageMapKit in Frameworks */,
+				04C01A5825882DC700D15D18 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				04C01A43258826F100D15D18 /* FruitClassifier.mlmodel */,
+				04C01A5325882D2D00D15D18 /* FruitManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -110,6 +121,12 @@
 			dependencies = (
 			);
 			name = whatFruit;
+			packageProductDependencies = (
+				04C01A5725882DC700D15D18 /* Alamofire */,
+				04C01A5B25882DF100D15D18 /* SwiftyJSON */,
+				04C01A6225882FD900D15D18 /* SDWebImage */,
+				04C01A6425882FD900D15D18 /* SDWebImageMapKit */,
+			);
 			productName = whatFruit;
 			productReference = 04C01A2B258826D300D15D18 /* whatFruit.app */;
 			productType = "com.apple.product-type.application";
@@ -137,6 +154,11 @@
 				Base,
 			);
 			mainGroup = 04C01A22258826D300D15D18;
+			packageReferences = (
+				04C01A5625882DC700D15D18 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				04C01A5A25882DF100D15D18 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+				04C01A6125882FD900D15D18 /* XCRemoteSwiftPackageReference "SDWebImage" */,
+			);
 			productRefGroup = 04C01A2C258826D300D15D18 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -166,6 +188,7 @@
 			files = (
 				04C01A2F258826D300D15D18 /* AppDelegate.swift in Sources */,
 				04C01A51258828A700D15D18 /* FruitViewController.swift in Sources */,
+				04C01A5425882D2D00D15D18 /* FruitManager.swift in Sources */,
 				04C01A44258826F100D15D18 /* FruitClassifier.mlmodel in Sources */,
 				04C01A31258826D300D15D18 /* SceneDelegate.swift in Sources */,
 			);
@@ -369,6 +392,56 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		04C01A5625882DC700D15D18 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.4.0;
+			};
+		};
+		04C01A5A25882DF100D15D18 /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		04C01A6125882FD900D15D18 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.10.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		04C01A5725882DC700D15D18 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 04C01A5625882DC700D15D18 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		04C01A5B25882DF100D15D18 /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 04C01A5A25882DF100D15D18 /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
+		};
+		04C01A6225882FD900D15D18 /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 04C01A6125882FD900D15D18 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+		04C01A6425882FD900D15D18 /* SDWebImageMapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 04C01A6125882FD900D15D18 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImageMapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 04C01A23258826D300D15D18 /* Project object */;
 }
